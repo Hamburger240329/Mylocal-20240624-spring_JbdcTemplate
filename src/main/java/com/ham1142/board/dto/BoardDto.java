@@ -1,4 +1,4 @@
-package com.ham1142.dto;
+package com.ham1142.board.dto;
 
 public class BoardDto {
 	

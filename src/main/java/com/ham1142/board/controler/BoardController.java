@@ -1,4 +1,4 @@
-package com.ham1142.controler;
+package com.ham1142.board.controler;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -8,10 +8,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.ham1142.command.BCommand;
-import com.ham1142.command.BListCommand;
-import com.ham1142.command.BWriteCommand;
-import com.ham1142.util.Constant;
+import com.ham1142.board.command.BCommand;
+import com.ham1142.board.command.BListCommand;
+import com.ham1142.board.command.BWriteCommand;
+import com.ham1142.board.util.Constant;
 
 @Controller
 public class BoardController {

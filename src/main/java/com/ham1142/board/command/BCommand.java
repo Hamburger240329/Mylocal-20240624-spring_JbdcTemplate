@@ -1,4 +1,4 @@
-package com.ham1142.command;
+package com.ham1142.board.command;
 
 import org.springframework.ui.Model;
 

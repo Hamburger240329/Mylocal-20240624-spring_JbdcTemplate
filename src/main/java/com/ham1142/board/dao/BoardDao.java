@@ -1,4 +1,4 @@
-package com.ham1142.dao;
+package com.ham1142.board.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -11,8 +11,8 @@ import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.PreparedStatementCreator;
 
-import com.ham1142.dto.BoardDto;
-import com.ham1142.util.Constant;
+import com.ham1142.board.dto.BoardDto;
+import com.ham1142.board.util.Constant;
 
 public class BoardDao {
 	

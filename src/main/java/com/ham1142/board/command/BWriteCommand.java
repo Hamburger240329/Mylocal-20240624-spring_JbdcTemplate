@@ -1,4 +1,4 @@
-package com.ham1142.command;
+package com.ham1142.board.command;
 
 import java.util.Map;
 
@@ -6,7 +6,7 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.ui.Model;
 
-import com.ham1142.dao.BoardDao;
+import com.ham1142.board.dao.BoardDao;
 
 public class BWriteCommand implements BCommand {
 

@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.ham1142</groupId>
 	<artifactId>board</artifactId>
-	<name>20240624-spring_JbdcTemplate</name>
+	<name>Mylocal-20240624-spring_JbdcTemplate</name>
 	<packaging>war</packaging>
 	<version>1.0.0-BUILD-SNAPSHOT</version>
 	<properties>

@@ -1,11 +1,11 @@
-package com.ham1142.command;
+package com.ham1142.board.command;
 
 import java.util.ArrayList;
 
 import org.springframework.ui.Model;
 
-import com.ham1142.dao.BoardDao;
-import com.ham1142.dto.BoardDto;
+import com.ham1142.board.dao.BoardDao;
+import com.ham1142.board.dto.BoardDto;
 
 public class BListCommand implements BCommand {
 

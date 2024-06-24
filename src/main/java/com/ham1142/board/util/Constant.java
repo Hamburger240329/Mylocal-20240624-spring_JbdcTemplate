@@ -1,4 +1,4 @@
-package com.ham1142.util;
+package com.ham1142.board.util;
 
 import org.springframework.jdbc.core.JdbcTemplate;
 
