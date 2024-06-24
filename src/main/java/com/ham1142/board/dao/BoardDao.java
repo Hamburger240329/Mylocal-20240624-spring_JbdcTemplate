@@ -56,4 +56,18 @@ public class BoardDao {
 		return boardDtos;
 	}
 	
+	public BoardDto content_view(String boardNum) {
+		
+		String sql = "SELECT * FROM springboard WHERE bnum=" + boardNum; // 값을 셋팅하는 것은 힘드므로 이렇게 + 로 하는 것이 훨씬 쉽고 단편하다
+		
+		BoardDto boardDto = this.template.queryForObject(sql, new BeanPropertyRowMapper(BoardDto.class));
+		// 여러개를 불러올때는 쿼리 query / 한개는 queryForObject
+		
+		return boardDto;
+		
+		
+	}
+	
+	
+	
 }

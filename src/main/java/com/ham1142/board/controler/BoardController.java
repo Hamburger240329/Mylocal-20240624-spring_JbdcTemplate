@@ -9,6 +9,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.ham1142.board.command.BCommand;
+import com.ham1142.board.command.BContentViewCommand;
 import com.ham1142.board.command.BListCommand;
 import com.ham1142.board.command.BWriteCommand;
 import com.ham1142.board.util.Constant;
@@ -53,5 +54,14 @@ public class BoardController {
 		return "list";
 	}
 	
-	
+	@RequestMapping(value = "/content_view")
+	public String content_view(HttpServletRequest request, Model model) {
+		
+		model.addAttribute("request", request);
+
+		command = new BContentViewCommand();
+		command.execute(model);
+		
+		return "content_view";
+	}
 }
