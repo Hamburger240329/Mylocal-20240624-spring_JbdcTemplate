@@ -9,7 +9,7 @@ import javax.sql.DataSource;
 
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.PreparedStatementCreator;
+import org.springframework.jdbc.core.PreparedStatementCreator;import org.springframework.jdbc.core.PreparedStatementSetter;
 
 import com.ham1142.board.dto.BoardDto;
 import com.ham1142.board.util.Constant;
@@ -68,6 +68,37 @@ public class BoardDao {
 		
 	}
 	
+	public void modify(final String bnum, final String btitle, final String bcontent) {
+		
+		String sql = "UPDATE springboard SET btitle=?, bcontent=? WHERE bnum=?";
+		
+		this.template.update(sql, new PreparedStatementSetter() {
+			
+			@Override
+			public void setValues(PreparedStatement ps) throws SQLException {
+				// TODO Auto-generated method stub
+				ps.setString(1, btitle);
+				ps.setString(2, bcontent);
+				ps.setString(3, bnum);			
+			}
+		});
+
+	}
 	
+	public void delete(final String bnum){//글 삭제 메소드
+		
+		String sql = "DELETE FORM springboard WHERE bnum=?"; 
+		
+		this.template.update(sql, new PreparedStatementSetter() {
+			
+			@Override
+			public void setValues(PreparedStatement ps) throws SQLException {
+				// TODO Auto-generated method stub
+				
+				ps.setString(1, bnum);
+			}
+		});	
 	
+	}
+
 }

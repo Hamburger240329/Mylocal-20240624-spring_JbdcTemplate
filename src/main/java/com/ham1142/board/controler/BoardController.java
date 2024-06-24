@@ -10,7 +10,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.ham1142.board.command.BCommand;
 import com.ham1142.board.command.BContentViewCommand;
+import com.ham1142.board.command.BDeleteCommand;
 import com.ham1142.board.command.BListCommand;
+import com.ham1142.board.command.BModifyCommand;
 import com.ham1142.board.command.BWriteCommand;
 import com.ham1142.board.util.Constant;
 
@@ -64,4 +66,55 @@ public class BoardController {
 		
 		return "content_view";
 	}
+	
+	@RequestMapping(value = "/modify")
+	public String modify(HttpServletRequest request, Model model){
+		
+		model.addAttribute("request", request);
+
+		command = new BContentViewCommand();
+		command.execute(model);
+		
+		
+		return "modify_form";
+	}
+
+	
+	@RequestMapping(value = "/modifyOk")
+	public String modifyOk(HttpServletRequest request, Model model) {
+		
+		model.addAttribute("request", request);
+		
+		command = new BModifyCommand();
+		command.execute(model);		
+		
+		return "redirect:list";
+	}
+	
+	
+	@RequestMapping(value = "/delete")
+	public String delete(HttpServletRequest request, Model model){
+		
+		model.addAttribute("request", request);
+
+		command = new BModifyCommand();
+		command.execute(model);
+		
+		
+		return "delete_form";
+	}
+
+	
+	@RequestMapping(value = "/deleteOk")
+	public String deleteOk(HttpServletRequest request, Model model) {
+		
+		model.addAttribute("request", request);
+		
+		command = new BModifyCommand();
+		command.execute(model);		
+		
+		return "redirect:list";
+	}
+	
 }
+
